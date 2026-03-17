@@ -1,6 +1,6 @@
 <div align="center">
   <a href="https://achinta.in">
-    <img src="https://readme-typing-svg.herokuapp.com?font=Outfit&weight=600&size=32&duration=3000&pause=1000&color=10B981&center=true&vCenter=true&width=600&lines=Hi,+I'm+Achinta+Siddhanta;Full+Stack+Developer;Creative+Engineer" alt="Typing Greeting" />
+    <img src="https://readme-typing-svg.herokuapp.com?font=Outfit&weight=600&size=32&duration=3000&pause=1000&color=10B981&center=true&vCenter=true&width=600&lines=Hi,+I'm+Achinta+Siddhanta;Full+Stack+Developer;Bridging+Web+%26+IoT;Creative+Engineer" alt="Typing Greeting" />
   </a>
   
   <br/>
@@ -18,6 +18,16 @@
       <img src="https://skillicons.dev/icons?i=gmail" height="40" alt="Email" />
     </a>
   </p>
+</div>
+
+<br/>
+
+<div align="center">
+  <a href="https://achinta.in">
+    <img src="https://img.shields.io/website?down_color=lightgrey&down_message=offline&label=achinta.in&style=for-the-badge&up_color=10B981&up_message=online&url=https%3A%2F%2Fachinta.in" alt="Portfolio Status" />
+  </a>
+  <br/><br/>
+  <img src="https://skillicons.dev/icons?i=nextjs,nodejs,postgres,docker,aws" alt="Core Stack focus" />
 </div>
 
 <br/>
