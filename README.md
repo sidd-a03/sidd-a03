@@ -62,7 +62,7 @@
   
   <img src="https://github-readme-stats.vercel.app/api?username=sidd-a03&show_icons=true&theme=transparent&hide_border=true&title_color=10B981&text_color=9CA3AF&icon_color=10B981&ring_color=10B981" alt="GitHub Stats" width="32%" />
   
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=sidd-a03&theme=transparent&hide_border=true&title_color=10B981&text_color=9CA3AF&icon_color=10B981&sideNums=10B981&sideLabels=9CA3AF&ring=10B981&fire=10B981&currStreakLabel=10B981" alt="GitHub Streak" width="32%" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=sidd-a03&theme=transparent&hide_border=true&title_color=10B981&text_color=9CA3AF&icon_color=10B981&sideNums=10B981&sideLabels=9CA3AF&ring=10B981&fire=10B981&currStreakLabel=10B981&v=1" alt="GitHub Streak" width="32%" />
   
   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=sidd-a03&layout=compact&theme=transparent&hide_border=true&title_color=10B981&text_color=9CA3AF" alt="Top Languages" width="32%" />
 </div>
