@@ -17,9 +17,7 @@
     </a>
   </p>
 </div>
-
 <br/>
-
 <div align="center">
   <a href="https://achinta.in">
     <img src="https://img.shields.io/website?down_color=lightgrey&down_message=offline&label=achinta.in&style=for-the-badge&up_color=10B981&up_message=online&url=https%3A%2F%2Fachinta.in" alt="Portfolio Status" />
