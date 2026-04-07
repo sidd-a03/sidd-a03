@@ -54,6 +54,7 @@
 
 <div align="center">
   <h3 align="center">📊 The Metrics</h3>
+  
   <br/>
   
   <img src="https://github-readme-stats.shion.dev/api?username=sidd-a03&show_icons=true&theme=transparent&hide_border=true&title_color=10B981&text_color=9CA3AF&icon_color=10B981&ring_color=10B981" alt="GitHub Stats" width="32%" />
