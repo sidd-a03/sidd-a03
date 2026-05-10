@@ -25,7 +25,6 @@
   <br/><br/>
   <img src="https://skillicons.dev/icons?i=nextjs,nodejs,postgres,docker,aws" alt="Core Stack focus" />
 </div>
-
 <br/>
 <table align="center" width="100%" style="border-collapse: collapse; border: none;">
   <tr style="border: none;">
