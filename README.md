@@ -72,6 +72,14 @@
     <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/sidd-a03/sidd-a03/output/github-contribution-grid-snake.svg">
     <img alt="github contribution grid snake animation" src="https://raw.githubusercontent.com/sidd-a03/sidd-a03/output/github-contribution-grid-snake.svg">
   </picture>
+
+  <br/>
+
+  <div align="center">
+    <h3 align="center">🐟 Daily Koi</h3>
+    <br/>
+    <img src="https://raw.githubusercontent.com/sidd-a03/sidd-a03/output/koi.gif" width="256" alt="My koi, redrawn daily from my GitHub activity" />
+  </div>
 </div>
 
 <br/>
