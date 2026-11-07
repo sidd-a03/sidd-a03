@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="144" height="44" viewBox="0 0 144 44" role="img" aria-label="LinkedIn">
+<style>
+  .lb{font:500 14px "Segoe UI",Ubuntu,"Helvetica Neue",Arial,sans-serif;fill:#E5E7EB}
+  .ping{transform-box:fill-box;transform-origin:center;animation:ping 2.2s ease-out infinite}
+  @keyframes ping{0%{opacity:.7;transform:scale(1)}100%{opacity:0;transform:scale(3)}}
+  @media (prefers-reduced-motion:reduce){.ping{animation:none;opacity:0}}
+</style>
+<rect x=".5" y=".5" width="143" height="43" rx="12" fill="#0D1411" stroke="#1F2A26"/>
+<g transform="translate(19.0 14.0) scale(0.0313)"><path d="M100.3 448H7.4V148.9h92.9zM53.8 108.1C24.1 108.1 0 83.5 0 53.8c0-14.3 5.7-27.9 15.8-38S39.6 0 53.8 0s27.9 5.7 38 15.8 15.8 23.8 15.8 38c0 29.7-24.1 54.3-53.8 54.3M447.9 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448z" fill="#D1D5DB"/></g>
+<text x="44" y="27" class="lb">LinkedIn</text>
+
+<g transform="translate(113.9 15.0) scale(0.8750)"><path d="M4.53 4.75A.75.75 0 0 1 5.28 4h6.01a.75.75 0 0 1 .75.75v6.01a.75.75 0 0 1-1.5 0v-4.2l-5.26 5.261a.749.749 0 0 1-1.275-.326.75.75 0 0 1 .215-.734L9.48 5.5h-4.2a.75.75 0 0 1-.75-.75" fill="#5B6660"/></g>
+</svg>
