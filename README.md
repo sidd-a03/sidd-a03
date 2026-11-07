@@ -33,14 +33,8 @@
 
 <br/>
 
-<h3 align="center"><code>~/contributions</code></h3>
-
 <div align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/sidd-a03/sidd-a03/output/github-contribution-grid-snake-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/sidd-a03/sidd-a03/output/github-contribution-grid-snake.svg">
-    <img alt="Contribution grid with a snake eating the commits" src="https://raw.githubusercontent.com/sidd-a03/sidd-a03/output/github-contribution-grid-snake.svg">
-  </picture>
+  <img src="https://raw.githubusercontent.com/sidd-a03/sidd-a03/output/city.svg" width="100%" alt="My last year of contributions drawn as an isometric city" />
   <br/>
   <img src="https://raw.githubusercontent.com/sidd-a03/sidd-a03/output/koi.gif" width="160" alt="My koi, redrawn daily from my GitHub activity" />
 </div>
