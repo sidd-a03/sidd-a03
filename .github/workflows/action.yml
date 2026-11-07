@@ -31,6 +31,12 @@ jobs:
           body: white
           output-dir: dist
 
+      - name: generate repo galaxy
+        run: node scripts/galaxy.mjs ${{ github.repository_owner }} dist/galaxy.svg
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+
       - name: push outputs to the output branch
         uses: crazy-max/ghaction-github-pages@v3.1.0
         with:
