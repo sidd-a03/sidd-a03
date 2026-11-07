@@ -20,9 +20,9 @@ const THEME = {
   arms: ["#10B981", "#D4A24C", "#6EE7B7", "#94A3B8", "#A3B18A"],
 };
 
-const W = 880, H = 360, CX = W / 2, CY = H / 2 + 6;
-const TILT = 0.5;         // vertical squash for a tilted-disc look
-const MAX_LABELS = 6;
+const W = 640, H = 440, CX = W / 2, CY = H / 2;
+const TILT = 0.62;        // vertical squash for a tilted-disc look
+const MAX_LABELS = 5;
 
 // ---------- deterministic randomness, so the picture is stable per user ----------
 function seeded(str) {
@@ -80,7 +80,7 @@ function sampleRepos() {
 
 // ---------- geometry ----------
 const project = (r, theta) => [CX + r * Math.cos(theta), CY + r * Math.sin(theta) * TILT];
-const armTheta = (armIndex, armCount, r) => (2 * Math.PI * armIndex) / armCount + r * 0.0165;
+const armTheta = (armIndex, armCount, r) => (2 * Math.PI * armIndex) / armCount + r * 0.02;
 const esc = (s) => s.replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 const f = (n) => n.toFixed(1);
 
@@ -100,12 +100,12 @@ function build(user, repos) {
   for (let a = 0; a < armCount; a++) {
     const col = THEME.arms[a % THEME.arms.length];
     for (let i = 0; i < 420; i++) {
-      const r = 26 + Math.pow(rnd(), 0.85) * 290;
-      const spread = 3 + r * 0.045;
+      const r = 22 + Math.pow(rnd(), 0.85) * 240;
+      const spread = 3 + r * 0.05;
       const th = armTheta(a, armCount, r) + gauss(rnd) * (spread / r);
       const rr = r + gauss(rnd) * spread * 0.6;
       const [x, y] = project(rr, th);
-      const op = (0.25 + rnd() * 0.55) * (1 - r / 360);
+      const op = (0.25 + rnd() * 0.55) * (1 - r / 300);
       dust += `<circle cx="${f(x)}" cy="${f(y)}" r="${f(0.5 + rnd() * 0.9)}" fill="${col}" opacity="${op.toFixed(2)}"/>`;
     }
   }
@@ -124,7 +124,7 @@ function build(user, repos) {
   const nodes = sorted.map((repo, i) => {
     const a = armOf(repo.lang);
     const k = (perArmIdx[a] = (perArmIdx[a] || 0) + 1);
-    const r = 48 + (k / perArmTotal[a]) * 240 + (rnd() - 0.5) * 10;
+    const r = 40 + (k / perArmTotal[a]) * 200 + (rnd() - 0.5) * 10;
     const th = armTheta(a, armCount, r) + (rnd() - 0.5) * 0.12;
     const [x, y] = project(r, th);
     const size = 2.2 + Math.log2(1 + repo.stars) * 1.6;
@@ -141,14 +141,17 @@ function build(user, repos) {
   const placed = [];
   let labels = "";
   for (const n of nodes.filter((n) => n.label)) {
-    const right = n.x >= CX;
-    const name = n.name.length > 22 ? n.name.slice(0, 21) + "…" : n.name;
-    const textW = name.length * 6.6 + 30;
+        const name = n.name.length > 18 ? n.name.slice(0, 17) + "…" : n.name;
+    const textW = (name.length + 4) * 9.2;
+    const gap0 = n.size * 3.2 + 6;
+    let right = n.x >= CX;
+    if (right && n.x + gap0 + textW > W - 14) right = false;
+    if (!right && n.x - gap0 - textW < 14) right = true;
     let ly = n.y + 4;
     for (let tries = 0; tries < 12; tries++) {
-      const hit = placed.find((p) => Math.abs(p.y - ly) < 15 && p.right === right && Math.abs(p.x - n.x) < textW + 40);
+      const hit = placed.find((p) => Math.abs(p.y - ly) < 20 && p.right === right && Math.abs(p.x - n.x) < textW + 40);
       if (!hit) break;
-      ly += ly < CY ? -15 : 15;
+      ly += ly < CY ? -20 : 20;
     }
     placed.push({ x: n.x, y: ly, right });
     const gap = n.size * 3.2 + 6;
@@ -162,7 +165,7 @@ function build(user, repos) {
 
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(user)}'s repositories drawn as a galaxy">
 <style>
-  .lbl{font:600 12px ui-monospace,SFMono-Regular,"JetBrains Mono",Menlo,Consolas,monospace;fill:${THEME.text}}
+  .lbl{font:600 15px ui-monospace,SFMono-Regular,"JetBrains Mono",Menlo,Consolas,monospace;fill:${THEME.text}}
   .st{font-weight:500;fill:${THEME.star}}
   .spin{transform-origin:${CX}px ${CY}px;animation:spin 240s linear infinite}
   .tw{animation:tw 4s ease-in-out infinite}
@@ -189,7 +192,7 @@ function build(user, repos) {
   <g transform="translate(${CX} ${CY}) scale(1 ${TILT}) translate(${-CX} ${-CY})">
     <g class="spin"><g transform="translate(${CX} ${CY}) scale(1 ${1 / TILT}) translate(${-CX} ${-CY})">${dust}</g></g>
   </g>
-  <ellipse cx="${CX}" cy="${CY}" rx="70" ry="${70 * TILT}" fill="url(#core)"/>
+  <ellipse cx="${CX}" cy="${CY}" rx="60" ry="${60 * TILT}" fill="url(#core)"/>
   <circle cx="${CX}" cy="${CY}" r="3" fill="${THEME.core}"/>
   ${repoMarks}
   ${labels}
